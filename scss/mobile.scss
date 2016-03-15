@@ -1,0 +1,207 @@
+@media screen and (max-width: 1100px) {
+    .fp-auto-height.fp-section,
+    .fp-auto-height .fp-slide,
+    .fp-auto-height .fp-tableCell {
+        height: auto !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        width: 100%;
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    //  Navigation
+    header {
+        top: 0;
+        position: fixed;
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    #open-nav {
+        display: block;
+    }
+    .nav-mobile #open-nav {
+        z-index: 4;
+    }
+    .nav {
+        right: -70%;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        display: block;
+        -webkit-transition: right .3s ease;
+        transition: right .3s ease;
+        background: #1b1a1a;
+    }
+    .nav-mobile .nav {
+        right: 0;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        background: rgba(27, 26, 26, 0.78);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .nav ul li {
+        width: 100%;
+        border-bottom: 2px solid #131212;
+        padding: 15px;
+        text-align: center;
+    }
+    .nav ul li:first-child {
+        border-top: 2px solid #131212;
+    }
+    .nav ul li.active {
+        border-bottom: 2px solid #F1C40F;
+    }
+    .nav-mobile .nav {
+        right: 0;
+    }
+    body.nav-mobile {
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+    .nav-mobile .nav-wrapper {
+        line-height: 40px;
+    }
+    .nav-wrapper {
+        line-height: 70px;
+        padding: 0 15px;
+    }
+    //  General 
+    .page-content {
+        position: relative;
+    }
+    // Home 
+    #section-home {
+        height: 100vh;
+    }
+    //  About 
+    .our-photo {
+        width: 100%;
+    }
+    .our-bio {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .our-bio h1 {
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .our-bio .job-wrap {
+        text-align: left;
+    }
+    .our-bio .age {
+        float: none;
+    }
+    #section-about .section-content {
+        padding: 60px 0;
+    }
+    // Content
+    .blog-wrapper {
+        margin-bottom: 0;
+    }
+    .section-content {
+        padding: 60px 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .row {
+        margin: 0;
+    }
+    // Timeline 
+    #section-about .section-content {
+        padding: 40px 0;
+    }
+    #section-timeline .timelines {
+        padding: 60px 0;
+        width: 100%;
+    }
+    .timeline-item {
+        padding: 20px 0;
+    }
+    .timeline-icon {
+        width: 30px;
+        height: 30px;
+        right: -12px;
+        top: 25px;
+        font-size: 18px !important;
+    }
+    .timeline-text {
+        padding-right: 0;
+        padding-left: 40px;
+        text-align: left;
+    }
+    #section-timeline .row {
+        margin: 0;
+    }
+    .timeline-item:nth-of-type(even) .timeline-icon {
+        left: 0;
+    }
+    .timeline-item:nth-of-type(even) {
+        transform: none;
+    }
+    .timeline-item:nth-of-type(even) .timeline-text {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+    .timelines h3 {
+        font-size: 24px;
+    }
+    .timelines:after {
+        left: 12px;
+        right: auto;
+    }
+    .timeline-icon {
+        right: auto;
+        top: 45px;
+    }
+    #section-timeline .section-content {
+        padding-bottom: 0;
+    }
+}
+@media screen and (min-width: 569px) and (max-width: 767px){
+    .col-3 {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 568px) {
+    
+}
+/*=============================================
+=            Overlay on Mobile Nav            =
+=============================================*/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.79);
+    z-index: -115;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+}
+
+.nav-mobile .overlay {
+    z-index: 6;
+    opacity: 1;
+}
+
+
+/*=====  End of Overlay on Mobile Nav  ======*/
