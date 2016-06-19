@@ -13,7 +13,9 @@ var slariScript = {
     },
     skillBar: function() {
         jQuery('.skill-percent-wrap').each(function() {
-            jQuery(this).find('.skill-percent').css({ width: jQuery(this).attr('data-percent') });
+            jQuery(this).find('.skill-percent').css({
+                width: jQuery(this).attr('data-percent')
+            });
         });
     },
     skillBarMobile: function() {
@@ -24,10 +26,12 @@ var slariScript = {
                 var homeHeight = jQuery('#section-home').height();
                 if (top > homeHeight) {
                     jQuery('.skill-percent-wrap').each(function() {
-                        jQuery(this).find('.skill-percent').delay(500).css({ width: jQuery(this).attr('data-percent') });
+                        jQuery(this).find('.skill-percent').delay(500).css({
+                            width: jQuery(this).attr('data-percent')
+                        });
                     });
-                } 
-            })
+                }
+            });
         }
     },
     fixHeader: function() {
@@ -66,7 +70,7 @@ var slariScript = {
     navResp: function() {
         jQuery('#open-nav').click(function() {
             jQuery('body').toggleClass('nav-mobile');
-        })
+        });
         // jQuery('.close-nav').click(function() {
         //     jQuery('body').removeClass('nav-mobile');
         // })
@@ -83,7 +87,7 @@ var slariScript = {
                 anchors: ['home', 'about', 'about', 'blog', 'work', 'contact'],
                 onLeave: function(index, nextIndex, dir) {
                     console.log(nextIndex, "index");
-                    // Detect when on top 
+                    // Detect when on top
                     if (nextIndex === 1) {
                         jQuery('body').removeClass('header-top');
                         jQuery('body').removeClass('animation-done');
@@ -117,15 +121,15 @@ var slariScript = {
                 jQuery("body").addClass("animation-done");
                 setTimeout(function() {
                     jQuery("body").addClass("animation-done-done");
-                }, 1000)
-            })
+                }, 1000);
+            });
     },
-    wowInit: function(){
+    wowInit: function() {
         var screenW = jQuery(window).width();
         if (screenW > 1024) {
             new WOW().init();
         }
-        
+
     },
 };
 jQuery(document).ready(function($) {

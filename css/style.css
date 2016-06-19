@@ -54,8 +54,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 a {
@@ -185,19 +184,23 @@ p {
 .section-title {
   text-align: center;
   margin: 20px 0;
-  -webkit-transition: 0.5s cubic-bezier(0.15, 0.8, 0.3, 1.2);
-          transition: 0.5s cubic-bezier(0.15, 0.8, 0.3, 1.2);
+  transition: 0.5s cubic-bezier(0.15, 0.8, 0.3, 1.2);
 }
 
 .section-content {
-  padding-top: 100px;
+  padding: 100px 0;
   position: relative;
   z-index: 4;
   height: 100%;
+  opacity: 0;
+}
+
+.page-content {
+  position: relative;
 }
 
 :focus {
-  outline: #fff auto 5px;
+  outline: #fff auto 0;
 }
 
 /*=====  End of General  ======*/
@@ -231,17 +234,15 @@ p {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
 
-.hvr-bounce-in:hover,
+.hvr-bounce-in:active,
 .hvr-bounce-in:focus,
-.hvr-bounce-in:active {
+.hvr-bounce-in:hover {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
       transform: scale(1.2);
-  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
@@ -252,8 +253,8 @@ p {
 .nav {
   text-align: right;
   float: right;
-  padding: 18px 0;
-  font-size: 1.3rem;
+  padding: 22px 0;
+  font-size: 1.1rem;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
@@ -271,12 +272,11 @@ p {
 #open-nav {
   height: 30px;
   position: relative;
-  margin: 20px 0 20px 10px;
+  margin: 10px 0 20px 10px;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
       transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
   float: right;
   width: 37px;
@@ -293,8 +293,7 @@ p {
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
       transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 #open-nav span:nth-child(even) {
@@ -303,13 +302,13 @@ p {
 }
 
 #open-nav span:nth-child(odd) {
-  left: 0px;
+  left: 0;
   border-radius: 9px 0 0 9px;
 }
 
 #open-nav span:nth-child(1),
 #open-nav span:nth-child(2) {
-  top: 0px;
+  top: 0;
 }
 
 #open-nav span:nth-child(3),
@@ -342,7 +341,6 @@ p {
 }
 
 #open-nav.open span:nth-child(2) {
-  left: -webkit-calc(50% - 5px);
   left: calc(50% - 5px);
   top: 7px;
 }
@@ -363,7 +361,6 @@ p {
 }
 
 #open-nav.open span:nth-child(6) {
-  left: -webkit-calc(38%);
   left: calc(38%);
   top: 18px;
 }
@@ -377,10 +374,7 @@ header {
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   z-index: 10;
-  -webkit-transition: 0.5s cubic-bezier(0.15, 0.8, 0.3, 1.2);
-          transition: 0.5s cubic-bezier(0.15, 0.8, 0.3, 1.2);
-  -webkit-transition-delay: .5s;
-          transition-delay: .5s;
+  transition: all .5s ease;
   animation: fade-in 2s linear 1;
   -webkit-animation: fade-in 2s linear 1;
   -moz-animation: fade-in 2s linear 1;
@@ -389,8 +383,7 @@ header {
 .header-bottom #header {
   top: auto;
   bottom: 0;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  transition-delay: 1s;
 }
 
 .header-top #header {
@@ -420,6 +413,31 @@ header {
   font-weight: 300;
   padding: 5px 0;
   font-size: 36px;
+  transition: all .3s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .logo h2 {
+    padding: 0;
+  }
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  height: 70px;
+}
+
+.fixed-header .nav {
+  padding: 12px 0;
+}
+
+.resize-header .logo h2 {
+  font-size: 26px;
+}
+
+.resize-header {
+  height: 50px;
 }
 
 /*============================
@@ -429,7 +447,7 @@ header {
   background-image: url("../img/hero.jpg");
   background-attachment: fixed;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
 }
 
 .hero {
@@ -444,11 +462,13 @@ header {
 }
 
 .hero .hero-text h2 {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .hero .hero-text h2 strong {
   color: #f1c40f;
+  font-weight: 300;
 }
 
 .hero .hero-arrow {
@@ -484,7 +504,6 @@ header {
 }
 
 #section-about .section-content {
-  padding: 200px 0;
   clear: both;
   overflow: hidden;
 }
@@ -534,8 +553,8 @@ header {
   float: left;
 }
 
-.our-bio .loc,
-.our-bio .job {
+.our-bio .job,
+.our-bio .loc {
   font-size: 1.1rem;
   text-transform: capitalize;
 }
@@ -571,8 +590,7 @@ header {
 .hobby img {
   width: 100%;
   max-width: 50px;
-  -webkit-transition: all 0.3s ease;
-          transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hobby .hobby-text span {
@@ -583,8 +601,7 @@ header {
       -ms-transform: translateY(50%);
           transform: translateY(50%);
   opacity: 0;
-  -webkit-transition: all 0.9s ease;
-          transition: all 0.9s ease;
+  transition: all 0.9s ease;
 }
 
 .hobby .hobby-text {
@@ -635,9 +652,8 @@ header {
 
 .our-skills span.skill-percent {
   background: #f1c40f;
-  width: 0%;
+  width: 0;
   height: 20px;
-  -webkit-transition: width 4s;
   /* Safari */
   transition: width 4s;
   display: inline-block;
@@ -747,7 +763,7 @@ header {
 }
 
 .blog {
-  height: 300px;
+  height: 250px;
   display: inline-block;
   padding: 10px;
   float: left;
@@ -768,8 +784,7 @@ header {
   background-size: cover;
   background-position: center center;
   overflow: hidden;
-  -webkit-transition: -webkit-transform 0.5s ease, -webkit-filter 0.8s ease-in-out;
-          transition: transform 0.5s ease, -webkit-filter 0.8s ease-in-out;
+  transition: transform 0.5s ease, -webkit-filter 0.8s ease-in-out;
 }
 
 .blog .blog-content:hover {
@@ -809,8 +824,9 @@ header {
   box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.2);
   content: '';
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-          transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: scale3d(1.4, 1.4, 1);
           transform: scale3d(1.4, 1.4, 1);
 }
@@ -818,17 +834,19 @@ header {
 .blog figure h4 {
   background: #fff;
   color: #2d434e;
-  margin: 20% 0 10px 0;
-  -webkit-transition: opacity 0.4s, -webkit-transform 0.35s;
-          transition: opacity 0.4s, transform 0.35s;
+  margin: 20% 0 10px;
+  transition: opacity 0.4s, -webkit-transform 0.35s;
+  transition: opacity 0.4s, transform 0.35s;
+  transition: opacity 0.4s, transform 0.35s, -webkit-transform 0.35s;
   opacity: 0;
 }
 
 .blog figure h5 {
   padding: 1em;
   opacity: 0;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-          transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: scale(1.5);
       -ms-transform: scale(1.5);
           transform: scale(1.5);
@@ -878,8 +896,7 @@ header {
   float: left;
   width: 33.3%;
   min-height: 1px;
-  -webkit-transition: all 0.35s ease-in-out;
-          transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -903,8 +920,7 @@ header {
   width: 100%;
   height: 100%;
   position: absolute;
-  -webkit-transition: opacity 0.6s ease;
-          transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
 }
 
 .work-wrapper > a:hover:before {
@@ -921,8 +937,7 @@ header {
   background: rgba(0, 0, 0, 0.5);
   padding: 5px;
   opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-          transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .work-wrapper > a:hover h4 {
@@ -947,7 +962,6 @@ header {
   margin: 0 auto;
   width: 80%;
   height: 100%;
-  margin-top: 90px;
 }
 
 #section-contact .contact-wrapper {
@@ -1045,7 +1059,6 @@ header {
   z-index: 1;
   -webkit-backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
   margin: 0 auto;
@@ -1070,7 +1083,6 @@ header {
 }
 
 .btn:hover {
-  -webkit-transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
   transition: background-color 0.1s 0.3s, color 0.1s 0.3s;
   color: #fff;
   border: 2px solid #fff !important;
