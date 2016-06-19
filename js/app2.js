@@ -8,6 +8,14 @@ var slariScript = {
         slariScript.fixHeader();
         slariScript.magnificPopup();
         slariScript.navMobile();
+        slariScript.clearHash();
+    },
+    clearHash: function() {
+        $('nav li> a').click(function(e) {
+            window.location.hash = ''; // for older browsers, leaves a # behind
+            history.pushState('', document.title, window.location.pathname); // nice and clean
+            e.preventDefault(); // no page reload
+        });
     },
     navMobile: function() {
         jQuery('#open-nav').click(function(e) {
