@@ -48,6 +48,10 @@
     }
 }
 @media screen and (max-width: 767px) {
+// Hero
+#section-home {
+    min-height: 100px;
+}
     .hero {
         width: 100%;
         h1 {
