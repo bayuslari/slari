@@ -53,7 +53,8 @@
 
 @media screen and (max-width: 767px) {
   #section-home {
-    min-height: 100px;
+    min-height: 568px;
+    height: 100%;
   }
   .hero {
     width: 100%;
