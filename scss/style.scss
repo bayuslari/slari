@@ -330,7 +330,7 @@ header {
             padding: 12px 0;
     }
 }
-.resize-header
+.resize-header{
     height: 50px;
     .logo h2 {
         font-size: 26px;
@@ -567,6 +567,7 @@ header {
 }
 .timeline-item {
     position: relative;
+    margin-bottom: 40px;
     z-index: 1;
     &:nth-of-type(even) {
         transform: translateX(100%);
