@@ -1,11 +1,10 @@
 @media screen and (max-width: 1100px) {
-    .fp-auto-height.fp-section,
     .fp-auto-height .fp-slide,
-    .fp-auto-height .fp-tableCell {
+    .fp-auto-height .fp-tableCell,
+    .fp-auto-height.fp-section {
         height: auto !important;
     }
 }
-
 @media screen and (max-width: 1024px) {
     .hero {
         width: 100%;
@@ -25,66 +24,99 @@
     #open-nav {
         display: block;
     }
-    .nav-mobile #open-nav {
-        z-index: 4;
-    }
-    .nav {
-        right: -70%;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
-        display: block;
-        -webkit-transition: right .3s ease;
-        transition: right .3s ease;
-        background: #1b1a1a;
-    }
-    .nav-mobile .nav {
-        right: 0;
-        top: 0;
-        position: fixed;
-        width: 100%;
-        background: rgba(27, 26, 26, 0.78);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-    }
     .nav ul li {
         width: 100%;
-        border-bottom: 2px solid #131212;
-        padding: 15px;
+        padding: 10px 0;
+    }
+     .nav {
+        width: 100%;
         text-align: center;
-    }
-    .nav ul li:first-child {
-        border-top: 2px solid #131212;
-    }
-    .nav ul li.active {
-        border-bottom: 2px solid #F1C40F;
-    }
-    .nav-mobile .nav {
-        right: 0;
-    }
-    body.nav-mobile {
-        position: fixed;
+        height: 100%;
+        display: block;
+        float: none;
+        padding: 0 !important;
+        transform: translateY(-250px);
+        opacity: 0;
+        transition: all .5s ease;
+        position: absolute;
         left: 0;
         right: 0;
     }
-    .nav-mobile .nav-wrapper {
-        line-height: 40px;
+    .nav-mobile .nav {
+        transform: translateY(0);
+        opacity: 1;
     }
-    .nav-wrapper {
-        line-height: 70px;
-        padding: 0 15px;
+    ul#myMenu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 4px;
+        background: rgba(27, 26, 26, 0.78);
     }
-    //  General 
+    .nav-mobile header {
+        background: rgba(27, 26, 26, 0.78);
+    }
+    // .nav-mobile #open-nav {
+    //     z-index: 4;
+    // }
+    // .nav {
+    //     right: -70%;
+    //     width: 100%;
+    //     height: 100%;
+    //     z-index: 3;
+    //     display: block;
+    //     -webkit-transition: right .3s ease;
+    //     transition: right .3s ease;
+    //     background: #1b1a1a;
+    // }
+    // .nav-mobile .nav {
+    //     right: 0;
+    //     top: 0;
+    //     // position: fixed;
+    //     width: 100%;
+    //     background: rgba(27, 26, 26, 0.78);
+    //     // display: flex;
+    //     // flex-direction: column;
+    //     // justify-content: center;
+    //     text-align: center;
+    // }
+    // .nav ul li {
+    //     width: 100%;
+    //     border-bottom: 2px solid #131212;
+    //     padding: 15px;
+    //     text-align: center;
+    // }
+    // .nav ul li:first-child {
+    //     border-top: 2px solid #131212;
+    // }
+    // .nav ul li.active {
+    //     border-bottom: 2px solid #F1C40F;
+    // }
+    // .nav-mobile .nav {
+    //     right: 0;
+    // }
+    // body.nav-mobile {
+    //     position: fixed;
+    //     left: 0;
+    //     right: 0;
+    // }
+    // .nav-mobile .nav-wrapper {
+    //     line-height: 40px;
+    // }
+    // .nav-wrapper {
+    //     line-height: 70px;
+    //     padding: 0 15px;
+    // }
+    //  General
     .page-content {
         position: relative;
     }
-    // Home 
+    // Home
     #section-home {
         height: 100vh;
     }
-    //  About 
+    //  About
     .our-photo {
         width: 100%;
     }
@@ -117,12 +149,11 @@
         padding: 60px 0;
     }
 }
-
 @media screen and (max-width: 767px) {
     .row {
         margin: 0;
     }
-    // Timeline 
+    // Timeline
     #section-about .section-content {
         padding: 40px 0;
     }
@@ -173,35 +204,30 @@
         padding-bottom: 0;
     }
 }
-@media screen and (min-width: 569px) and (max-width: 767px){
+@media screen and (min-width: 569px) and (max-width: 767px) {
     .col-3 {
         width: 50%;
     }
 }
-@media screen and (max-width: 568px) {
-    
-}
+@media screen and (max-width: 568px) {}
 /*=============================================
 =            Overlay on Mobile Nav            =
 =============================================*/
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.79);
-    z-index: -115;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s ease-in;
-    transition: opacity 0.2s ease-in;
-}
-
-.nav-mobile .overlay {
-    z-index: 6;
-    opacity: 1;
-}
-
-
+// .overlay {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+//     background: rgba(0, 0, 0, 0.79);
+//     z-index: -115;
+//     opacity: 0;
+//     -webkit-transition: opacity 0.2s ease-in;
+//     transition: opacity 0.2s ease-in;
+// }
+//
+// .nav-mobile .overlay {
+//     z-index: 6;
+//     opacity: 1;
+// }
 /*=====  End of Overlay on Mobile Nav  ======*/
