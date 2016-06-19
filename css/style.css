@@ -448,6 +448,7 @@ header {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  position: relative;
 }
 
 .hero {
