@@ -29,21 +29,24 @@ var slariScript = {
         // Fixed Header
         jQuery('header').each(function() {
             var that = this;
-            //     var $things = jQuery('header');
-            jQuery(that).waypoint(function(direction) {
-                if (direction === 'down') {
-                    jQuery(that).addClass('fixed-header');
-                    jQuery(that).addClass('resize-header');
-                }
-            });
-            jQuery(that).waypoint(function(direction) {
-                if (direction === 'up') {
-                    jQuery(that).removeClass('fixed-header');
-                    setTimeout(function() {
-                        jQuery(that).removeClass('resize-header');
-                    }, 50);
-                }
-            });
+            var screenW = jQuery(window).width();
+            if (screenW >= 767) {
+                //     var $things = jQuery('header');
+                jQuery(that).waypoint(function(direction) {
+                    if (direction === 'down') {
+                        jQuery(that).addClass('fixed-header');
+                        jQuery(that).addClass('resize-header');
+                    }
+                });
+                jQuery(that).waypoint(function(direction) {
+                    if (direction === 'up') {
+                        jQuery(that).removeClass('fixed-header');
+                        setTimeout(function() {
+                            jQuery(that).removeClass('resize-header');
+                        }, 50);
+                    }
+                });
+            }
         });
     },
     waypointsInit: function() {

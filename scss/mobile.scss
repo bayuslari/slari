@@ -6,108 +6,6 @@
     }
 }
 @media screen and (max-width: 1024px) {
-    .hero {
-        width: 100%;
-        h1 {
-            font-size: 2.5rem;
-        }
-    }
-    //  Navigation
-    header {
-        top: 0;
-        position: fixed;
-        .row {
-            margin-right: 0;
-            margin-left: 0;
-        }
-    }
-    #open-nav {
-        display: block;
-    }
-    .nav ul li {
-        width: 100%;
-        padding: 10px 0;
-    }
-     .nav {
-        width: 100%;
-        text-align: center;
-        height: 100%;
-        display: block;
-        float: none;
-        padding: 0 !important;
-        transform: translateY(-250px);
-        opacity: 0;
-        transition: all .5s ease;
-        position: absolute;
-        left: 0;
-        right: 0;
-    }
-    .nav-mobile .nav {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    ul#myMenu {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 4px;
-        background: rgba(27, 26, 26, 0.78);
-    }
-    .nav-mobile header {
-        background: rgba(27, 26, 26, 0.78);
-    }
-    // .nav-mobile #open-nav {
-    //     z-index: 4;
-    // }
-    // .nav {
-    //     right: -70%;
-    //     width: 100%;
-    //     height: 100%;
-    //     z-index: 3;
-    //     display: block;
-    //     -webkit-transition: right .3s ease;
-    //     transition: right .3s ease;
-    //     background: #1b1a1a;
-    // }
-    // .nav-mobile .nav {
-    //     right: 0;
-    //     top: 0;
-    //     // position: fixed;
-    //     width: 100%;
-    //     background: rgba(27, 26, 26, 0.78);
-    //     // display: flex;
-    //     // flex-direction: column;
-    //     // justify-content: center;
-    //     text-align: center;
-    // }
-    // .nav ul li {
-    //     width: 100%;
-    //     border-bottom: 2px solid #131212;
-    //     padding: 15px;
-    //     text-align: center;
-    // }
-    // .nav ul li:first-child {
-    //     border-top: 2px solid #131212;
-    // }
-    // .nav ul li.active {
-    //     border-bottom: 2px solid #F1C40F;
-    // }
-    // .nav-mobile .nav {
-    //     right: 0;
-    // }
-    // body.nav-mobile {
-    //     position: fixed;
-    //     left: 0;
-    //     right: 0;
-    // }
-    // .nav-mobile .nav-wrapper {
-    //     line-height: 40px;
-    // }
-    // .nav-wrapper {
-    //     line-height: 70px;
-    //     padding: 0 15px;
-    // }
     //  General
     .page-content {
         position: relative;
@@ -150,8 +48,72 @@
     }
 }
 @media screen and (max-width: 767px) {
+    .hero {
+        width: 100%;
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    //  logo
+    .logo h2 {
+        font-size: 26px;
+    }
+    //  Navigation
+    header {
+        top: 0;
+        position: fixed;
+        height: 50px;
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+    #open-nav {
+        display: block;
+    }
+    .nav ul li {
+        width: 100%;
+        padding: 10px 0;
+    }
+     .nav {
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        display: block;
+        float: none;
+        padding: 0 !important;
+        transform: translateY(-250px);
+        opacity: 0;
+        transition: all .5s ease;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+    .nav-mobile .nav {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    ul#myMenu {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 4px;
+        background: rgba(27, 26, 26, 0.78);
+    }
+    .nav-mobile header {
+        background: rgba(27, 26, 26, 0.78);
+    }
+
     .row {
         margin: 0;
+    }
+    //  About
+    .hobbies {
+        text-align: center;;
+    }
+    .hobby {
+        float: none;
     }
     // Timeline
     #section-about .section-content {
@@ -203,6 +165,18 @@
     #section-timeline .section-content {
         padding-bottom: 0;
     }
+    //  Work
+    .work-wrapper {
+        margin:  0;
+    }
+    //  Contact
+    #section-contact .medium-form,#section-contact .large-form {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    #section-contact .social-btn {
+    padding: 0 15px;
+}
 }
 @media screen and (min-width: 569px) and (max-width: 767px) {
     .col-3 {

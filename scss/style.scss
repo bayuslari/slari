@@ -766,7 +766,7 @@ header {
         height: 100%;
     }
     .contact-wrapper {
-        margin-top: 40px;
+        margin: 40px -5px 0;
     }
     &:before {
         content: '';
@@ -784,7 +784,7 @@ header {
         color: #fff;
     }
     .medium-form {
-        width: 49%;
+        width: 50%;
         display: inline-block;
         &:nth-of-type(2) {
             float: right;
@@ -803,6 +803,7 @@ header {
     }
     .contact-form {
         margin-bottom: 20px;
+        padding: 0 5px;
     }
     .btn-wrap {
         height: 40px;

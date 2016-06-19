@@ -966,7 +966,7 @@ header {
 }
 
 #section-contact .contact-wrapper {
-  margin-top: 40px;
+  margin: 40px -5px 0;
 }
 
 #section-contact:before {
@@ -987,7 +987,7 @@ header {
 }
 
 #section-contact .medium-form {
-  width: 49%;
+  width: 50%;
   display: inline-block;
 }
 
@@ -1011,6 +1011,7 @@ header {
 
 #section-contact .contact-form {
   margin-bottom: 20px;
+  padding: 0 5px;
 }
 
 #section-contact .btn-wrap {

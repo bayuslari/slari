@@ -7,60 +7,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  .hero {
-    width: 100%;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-  header {
-    top: 0;
-    position: fixed;
-  }
-  header .row {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  #open-nav {
-    display: block;
-  }
-  .nav ul li {
-    width: 100%;
-    padding: 10px 0;
-  }
-  .nav {
-    width: 100%;
-    text-align: center;
-    height: 100%;
-    display: block;
-    float: none;
-    padding: 0 !important;
-    -webkit-transform: translateY(-250px);
-        -ms-transform: translateY(-250px);
-            transform: translateY(-250px);
-    opacity: 0;
-    transition: all .5s ease;
-    position: absolute;
-    left: 0;
-    right: 0;
-  }
-  .nav-mobile .nav {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-  ul#myMenu {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    top: 4px;
-    background: rgba(27, 26, 26, 0.78);
-  }
-  .nav-mobile header {
-    background: rgba(27, 26, 26, 0.78);
-  }
   .page-content {
     position: relative;
   }
@@ -106,8 +52,72 @@
 }
 
 @media screen and (max-width: 767px) {
+  .hero {
+    width: 100%;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .logo h2 {
+    font-size: 26px;
+  }
+  header {
+    top: 0;
+    position: fixed;
+    height: 50px;
+  }
+  header .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #open-nav {
+    display: block;
+  }
+  .nav ul li {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .nav {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    display: block;
+    float: none;
+    padding: 0 !important;
+    -webkit-transform: translateY(-250px);
+        -ms-transform: translateY(-250px);
+            transform: translateY(-250px);
+    opacity: 0;
+    transition: all .5s ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .nav-mobile .nav {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  ul#myMenu {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 4px;
+    background: rgba(27, 26, 26, 0.78);
+  }
+  .nav-mobile header {
+    background: rgba(27, 26, 26, 0.78);
+  }
   .row {
     margin: 0;
+  }
+  .hobbies {
+    text-align: center;
+  }
+  .hobby {
+    float: none;
   }
   #section-about .section-content {
     padding: 40px 0;
@@ -159,6 +169,16 @@
   }
   #section-timeline .section-content {
     padding-bottom: 0;
+  }
+  .work-wrapper {
+    margin: 0;
+  }
+  #section-contact .medium-form, #section-contact .large-form {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  #section-contact .social-btn {
+    padding: 0 15px;
   }
 }
 
